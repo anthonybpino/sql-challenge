@@ -1,6 +1,4 @@
 -- Create tables for data
-
-
 CREATE TABLE "departments" (
     "dept_no" VARCHAR,
     "dept_name" VARCHAR,
@@ -41,8 +39,8 @@ CREATE TABLE "dept_manager" (
 );
 
 CREATE TABLE "salaries" (
-    "emp_no" INT   NOT NULL,
-    "salary" INT   NOT NULL
+    "emp_no" INT NOT NULL,
+    "salary" INT NOT NULL
 );
 
 ALTER TABLE "employees" ADD CONSTRAINT "fk_employees_emp_title_id" FOREIGN KEY("emp_title_id")
@@ -64,9 +62,9 @@ ALTER TABLE "salaries" ADD CONSTRAINT "fk_salaries_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
 
 -- Viewing the tables 
--- SELECT * FROM departments;
--- SELECT * FROM titles;	
--- SELECT * FROM employees;	
--- SELECT * FROM dept_emp;
--- SELECT * FROM dept_manager;	
--- SELECT * FROM salaries;
+SELECT * FROM departments;
+SELECT * FROM titles;	
+SELECT * FROM employees;	
+SELECT * FROM dept_emp;
+SELECT * FROM dept_manager;	
+SELECT * FROM salaries;
